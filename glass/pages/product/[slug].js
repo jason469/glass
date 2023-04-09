@@ -3,9 +3,24 @@ import {client, urlFor} from "../../lib/client";
 import {AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar} from "react-icons/ai";
 import {Product} from "../../components";
 
+import {useStateContext} from "../../context/StateContext";
+
 const ProductDetails = ({product, products}) => {
   const {image, name, details, price} = product;
   const [index, setIndex] = useState(0);
+  const [productInCart, setProductInCart] = useState(false)
+  const {decQty, incQty, qty, onAdd, cartItems} = useStateContext()
+  
+  const addItem = (product, qty) => {
+    let foundProduct = cartItems.find((item) => item._id === product._id);
+    
+    if (foundProduct) {
+      setProductInCart(true)
+    } else {
+      setProductInCart(false)
+      onAdd(product, qty)
+    }
+  }
   
   return (
     <section>
@@ -49,10 +64,10 @@ const ProductDetails = ({product, products}) => {
               <p className="price">${price}</p>
               <section className="quantity">
                 <h3>Quantity: </h3>
-                <p className="quantity-desc">
+                <p className="quantity-desc | flex | justify-center items-center">
                 <span
                   className="minus"
-                  onClick=""
+                  onClick={decQty}
                 >
                   <AiOutlineMinus/>
                 </span>
@@ -60,18 +75,20 @@ const ProductDetails = ({product, products}) => {
                     className="num"
                     onClick=""
                   >
-                  0
+                  {qty}
                 </span>
                   <span
                     className="plus"
-                    onClick=""
+                    onClick={incQty}
                   >
                   <AiOutlinePlus/>
                 </span>
                 </p>
               </section>
               <section className="buttons">
-                <button type="button" className="add-to-cart">Add to Cart</button>
+                <button type="button" className="add-to-cart" onClick={() => addItem(product, qty)}
+                        disabled={productInCart}>Add to Cart
+                </button>
                 <button type="button" className="buy-now">Buy now</button>
               </section>
             </section>
