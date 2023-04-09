@@ -1,38 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Glass
+> Created by Jason Liu <br>
+> This app has been deployed as version 1.0
 
-## Getting Started
+### What is Glass?
+Glass is an e-commerce website created to mimic a small business. <br>
+It allows users to purchase various items, add them to a cart, and pay using Stripe. <br>
+Stripe is currently using **test data mode** and so no transactions will actually be sent through (although the checkout page will mimic it)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### What technologies does Glass use?
+- **_NextJS_** is used to create the frontend and backend (this is a framework built on top of React)
+- **_Sanity_** is used as a CMS to allow users to easily add new items to the website and change the banner
+- **_Stripe_** is used to handle payments  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Moving forward with Glass
+Latte is currently in version 1.0 for the production state.<br>
+In the future, I have the following improvements:
+- Streamline the items being added to follow/mimic a specific business
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Where can I see Glass?
+To visit Glass, please visit the following link: <br>
+> [Glass](https://latte-frontend.onrender.com/)
