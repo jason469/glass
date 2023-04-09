@@ -22,4 +22,4 @@ In the future, I have the following improvements:
 
 # Where can I see Glass?
 To visit Glass, please visit the following link: <br>
-> [Glass](https://glass-78b065cai-jasonliu215-gmailcom.vercel.app/)
+> [Glass](https://glass-rouge.vercel.app/)
