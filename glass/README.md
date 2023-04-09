@@ -12,13 +12,14 @@ Stripe is currently using **test data mode** and so no transactions will actuall
 - **_NextJS_** is used to create the frontend and backend (this is a framework built on top of React)
 - **_Sanity_** is used as a CMS to allow users to easily add new items to the website and change the banner
 - **_Stripe_** is used to handle payments  
+- **_TailwindCSS_** is used to help with building the CSS  
 
 ### Moving forward with Glass
-Latte is currently in version 1.0 for the production state.<br>
+Glass is currently in version 1.0 for the production state.<br>
 In the future, I have the following improvements:
 - Streamline the items being added to follow/mimic a specific business
 
 
 # Where can I see Glass?
 To visit Glass, please visit the following link: <br>
-> [Glass](https://latte-frontend.onrender.com/)
+> [Glass](https://glass-78b065cai-jasonliu215-gmailcom.vercel.app/)
