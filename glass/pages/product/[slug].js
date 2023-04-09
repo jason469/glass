@@ -9,7 +9,7 @@ const ProductDetails = ({product, products}) => {
   const {image, name, details, price} = product;
   const [index, setIndex] = useState(0);
   const [productInCart, setProductInCart] = useState(false)
-  const {decQty, incQty, qty, onAdd, cartItems} = useStateContext()
+  const {decQty, incQty, qty, onAdd, cartItems, setShowCart} = useStateContext()
   
   const addItem = (product, qty) => {
     let foundProduct = cartItems.find((item) => item._id === product._id);
@@ -20,6 +20,11 @@ const ProductDetails = ({product, products}) => {
       setProductInCart(false)
       onAdd(product, qty)
     }
+  }
+  
+  const handleBuyNow = (product, qty) => {
+    onAdd(product, qty);
+    setShowCart(true);
   }
   
   return (
@@ -39,6 +44,7 @@ const ProductDetails = ({product, products}) => {
                     alt=""
                     className={i === index ? 'small-image selected-image' : 'small-image'}
                     onMouseEnter={() => setIndex(i)}
+                    key={i}
                   />
                 ))}
               </section>
@@ -73,7 +79,6 @@ const ProductDetails = ({product, products}) => {
                 </span>
                   <span
                     className="num"
-                    onClick=""
                   >
                   {qty}
                 </span>
@@ -89,7 +94,7 @@ const ProductDetails = ({product, products}) => {
                 <button type="button" className="add-to-cart" onClick={() => addItem(product, qty)}
                         disabled={productInCart}>Add to Cart
                 </button>
-                <button type="button" className="buy-now">Buy now</button>
+                <button type="button" className="buy-now" onClick={() => handleBuyNow(product, qty)}>Buy now</button>
               </section>
             </section>
           </section>
