@@ -1,8 +1,27 @@
 import React from 'react';
+import Head from 'next/head'
 
-const Layout = (props) => {
+import {Navbar} from "../../components";
+import {Footer} from "../../components";
+const Layout = ({children}) => {
   return (
-    <div></div>
+    <section className="layout">
+      <Head>
+        <title>Glass Store</title>
+      </Head>
+      
+      <header>
+        <Navbar />
+      </header>
+      
+      <main className="main-container">
+        {children}
+      </main>
+      
+      <footer>
+        <Footer />
+      </footer>
+    </section>
   )
 };
 
