@@ -484,6 +484,8 @@ span.text-red {
     margin: 40px;
     margin-top: 60px;
     color: #324d67;
+    justify-content: center;
+    align-items: center;
 
 }
 
