@@ -13,13 +13,16 @@ const Navbar = (props) => {
         <Link href="/">Glass</Link>
       </p>
       
-      {/*<button type="button" className="cart-icon" onClick={() => setShowCart(true)}>*/}
-      <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
-        <AiOutlineShopping/>
-        {/*<span className="cart-item-qty">{totalQuantities}</span>*/}
-        <span className="cart-item-qty">{totalQuantities}</span>
-      </button>
-      
+      <section className="flex gap-4">
+        <p className="logo">
+          <a href="https://glass.sanity.studio/desk" target="_blank">Sanity</a>
+        </p>
+        
+        <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
+          <AiOutlineShopping/>
+          <span className="cart-item-qty">{totalQuantities}</span>
+        </button>
+      </section>
       {showCart && <Cart/>}
     </section>
   )
