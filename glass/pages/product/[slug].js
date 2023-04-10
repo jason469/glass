@@ -12,13 +12,14 @@ const ProductDetails = ({product, products}) => {
   const {decQty, incQty, qty, onAdd, cartItems, setShowCart} = useStateContext()
   
   const addItem = (product, qty) => {
-    let foundProduct = cartItems.find((item) => item._id === product._id);
+    let foundProduct = cartItems.find((item) => item._id === product._id);  // True if item is already in cart
     
     if (foundProduct) {
       setProductInCart(true)
     } else {
-      setProductInCart(false)
       onAdd(product, qty)
+      setProductInCart(false)
+      console.log(productInCart)
     }
   }
   
@@ -92,7 +93,7 @@ const ProductDetails = ({product, products}) => {
               </section>
               <section className="buttons">
                 <button type="button" className="add-to-cart" onClick={() => addItem(product, qty)}
-                        disabled={productInCart}>Add to Cart
+                        disabled={productInCart}>{productInCart ? "In Cart" : "Add to Cart"}
                 </button>
                 <button type="button" className="buy-now" onClick={() => handleBuyNow(product, qty)}>Buy now</button>
               </section>

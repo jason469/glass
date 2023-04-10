@@ -1,13 +1,18 @@
 import React from 'react';
-import {AiFillInstagram, AiOutlineTwitter} from "react-icons/ai";
+import {AiOutlineGithub} from "react-icons/ai";
+import {BsFillPersonFill} from "react-icons/bs"
 
 const Footer = (props) => {
   return (
-    <section className="footer-container">
-      <p>2023 Glass All rights reserved</p>
+    <section className="footer-container | ">
+      <p>© 2023 Glass</p>
       <p className="icons">
-        <AiFillInstagram/>
-        <AiOutlineTwitter/>
+        <a href="https://jasonliu.onrender.com/" target="_blank">
+          <BsFillPersonFill/>
+        </a>
+        <a href="https://github.com/jason469/glass" target="_blank">
+          <AiOutlineGithub/>
+        </a>
       </p>
     </section>
   )

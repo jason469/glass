@@ -9,12 +9,12 @@ const Navbar = (props) => {
   
   return (
     <section className="navbar-container">
-      <p className="logo">
-        <Link href="/">Glass</Link>
-      </p>
+      <section className="logo">
+        <Link href="/" style={{"font-family": ""}}>Glass</Link>
+      </section>
       
       <section className="flex gap-4">
-        <p className="logo">
+        <p className="">
           <a href="https://glass.sanity.studio/desk" target="_blank">Sanity</a>
         </p>
         

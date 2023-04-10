@@ -4,7 +4,6 @@ import Link from "next/link";
 import {urlFor} from "../../lib/client";
 
 const HeroBanner = ({heroBanner}) => {
-  console.log(heroBanner)
   return (
     <section className="hero-banner-container">
       <section>

@@ -7,7 +7,7 @@ const Layout = ({children}) => {
   return (
     <section className="layout">
       <Head>
-        <title>Glass Store</title>
+        <title>Glass</title>
       </Head>
       
       <header>
