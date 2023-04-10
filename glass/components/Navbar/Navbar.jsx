@@ -10,7 +10,7 @@ const Navbar = (props) => {
   return (
     <section className="navbar-container">
       <section className="logo">
-        <Link href="/" style={{"font-family": ""}}>Glass</Link>
+        <Link href="/" style={{fontFamily: ""}}>Glass</Link>
       </section>
       
       <section className="flex gap-4">
