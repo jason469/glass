@@ -26,6 +26,14 @@ const FooterBanner = ({
           <p>{saleTime}</p>
         </section>
         
+        
+        <img
+          src={urlFor(image)}
+          alt=""
+          width={250}
+          height={250}
+        />
+        
         <section className="right">
           <p>{smallText}</p>
           <h3>{midText}</h3>
@@ -36,13 +44,7 @@ const FooterBanner = ({
             </button>
           </Link>
         </section>
-  
-        <img
-          src={urlFor(image)}
-          alt=""
-          className="footer-banner-image"
-        />
-        
+      
       </section>
     </section>
   )

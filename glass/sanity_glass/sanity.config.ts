@@ -10,7 +10,7 @@ export default defineConfig({
   name: 'default',
   title: 'glass',
 
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  projectId: 'enqfyenf',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
