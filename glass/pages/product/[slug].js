@@ -74,9 +74,13 @@ const ProductDetails = ({product, products}) => {
               <section className="flex g-4 items-center | mt-2">
                 <h3 className="mr-2">Quantity:</h3>
                 <p className="flex | justify-center items-center gap-2 | text-lg | cursor-pointer">
-                  <i className="fa-solid fa-circle-minus" onClick={decQty}></i>
-                  <span className=""> {qty}</span>
-                  <i className="fa-solid fa-circle-plus" onClick={incQty}></i>
+                  <article onClick={decQty}>
+                  <i className="fa-solid fa-circle-minus"></i>
+                  </article>
+                  <article className=""> {qty}</article>
+                  <article onClick={incQty}>
+                  <i className="fa-solid fa-circle-plus"></i>
+                  </article>
                 </p>
               </section>
               <section className="flex gap-4">
