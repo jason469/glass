@@ -22,7 +22,7 @@ body, * {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     box-sizing: border-box;
-
+    overscroll-behavior: none;
 }
 
 ::-webkit-scrollbar {
@@ -80,6 +80,10 @@ main {
     to {
         transform: translateX(-50%);
     }
+}
+
+.logo__link {
+    font-family: "Playfair Display", sans-serif !important;
 }
 
 .cart-item-qty {
@@ -268,16 +272,6 @@ main {
     padding: 40px 10px;
     position: relative;
 
-}
-
-.footer-container {
-    @apply bg-primary-200 py-3 text-navyBlue-300 flex align-middle justify-center gap-3 font-bold mt-10;
-}
-
-.footer-container .icons {
-    font-size: 30px;
-    display: flex;
-    gap: 10px;
 }
 
 .cart-heading {

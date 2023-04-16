@@ -4,14 +4,14 @@ import {BsFillPersonFill} from "react-icons/bs"
 
 const Footer = (props) => {
   return (
-    <section className="footer-container | ">
+    <section className="bg-primary-200 py-3 text-navyBlue-300 flex items-center justify-center gap-3 font-bold mt-10 | ">
       <p>© 2023 Glass</p>
-      <p className="icons">
+      <p className="text-2xl flex gap-4">
         <a href="https://jasonliu.onrender.com/" target="_blank">
-          <BsFillPersonFill/>
+          <BsFillPersonFill className="hover:scale-125 transition duration-300"/>
         </a>
         <a href="https://github.com/jason469/glass" target="_blank">
-          <AiOutlineGithub/>
+          <AiOutlineGithub className="hover:scale-125 transition duration-300"/>
         </a>
       </p>
     </section>

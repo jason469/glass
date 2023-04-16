@@ -9,16 +9,22 @@ const Navbar = (props) => {
   
   return (
     <section className="navbar-container | bg-primary-200">
-      <section className="font-logo | text-white text-4xl italic font-bold tracking-widest">
-        <Link href="/" className="font-logo">Glass</Link>
+      <section className="text-white text-4xl italic font-bold tracking-widest">
+        <Link href="/">
+          <p className="font-logo cursor-pointer">
+            Glass
+          </p>
+        </Link>
       </section>
       
       <section className="flex gap-4 | uppercase | text-white tracking-wider">
-          <a href="https://glass.sanity.studio/desk" target="_blank">Sanity</a>
+        <a href="https://glass.sanity.studio/desk" target="_blank">Sanity</a>
       </section>
       
       <section className="flex gap-4 | text-white">
-        <button type="button" className="cursor-pointer transform duration-300 bg-none border-none text-2xl leading-normal hover:scale-110 relative" onClick={() => setShowCart(true)}>
+        <button type="button"
+                className="cursor-pointer transform duration-300 bg-none border-none text-2xl leading-normal hover:scale-110 relative"
+                onClick={() => setShowCart(true)}>
           <AiOutlineShopping className="text-white"/>
           <span className="cart-item-qty | bg-white | text-primary-200">{totalQuantities}</span>
         </button>
