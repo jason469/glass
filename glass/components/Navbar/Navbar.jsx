@@ -18,7 +18,7 @@ const Navbar = (props) => {
       </section>
       
       <section className="flex gap-4 | text-white">
-        <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
+        <button type="button" className="cursor-pointer transform duration-300 bg-none border-none text-2xl leading-normal hover:scale-110 relative" onClick={() => setShowCart(true)}>
           <AiOutlineShopping className="text-white"/>
           <span className="cart-item-qty | bg-white | text-primary-200">{totalQuantities}</span>
         </button>

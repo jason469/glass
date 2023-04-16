@@ -6,7 +6,7 @@ import {Footer} from "../../components";
 import HeaderBanner from "../../components/HeaderBanner/HeaderBanner";
 const Layout = ({children}) => {
   return (
-    <section className="layout">
+    <section className="mt-3">
       <Head>
         <title>Glass</title>
       </Head>
@@ -16,7 +16,7 @@ const Layout = ({children}) => {
         <Navbar />
       </header>
       
-      <main className="main-container">
+      <main className="flex items-center justify-center flex-col">
         {children}
       </main>
       

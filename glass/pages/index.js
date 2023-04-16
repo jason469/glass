@@ -4,7 +4,7 @@ import {client} from "../lib/client";
 
 const Home = ({products, bannerData}) => {
   return (
-    <section>
+    <section className="flex flex-col items-center justify-center">
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}></HeroBanner>
       <section className="products-heading">
         <h2>Best Selling Products</h2>

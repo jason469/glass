@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -34,15 +34,8 @@ a {
     text-decoration: none;
 }
 
-.main-container {
-    max-width: 1400px;
-    margin: auto;
-    width: 100%;
-
-}
-
-.layout {
-    margin-top: 0.8rem;
+main {
+    width: 100vw;
 }
 
 .navbar-container {
@@ -87,20 +80,6 @@ a {
     to {
         transform: translateX(-50%);
     }
-}
-
-.cart-icon {
-    font-size: 25px;
-    color: gray;
-    cursor: pointer;
-    position: relative;
-    transition: transform .4s ease;
-    border: none;
-    background-color: transparent;
-}
-
-.cart-icon:hover {
-    transform: scale(1.1, 1.1);
 }
 
 .cart-item-qty {
@@ -155,11 +134,8 @@ a {
 }
 
 .hero-banner-container {
-    @apply bg-secondary-200;
-    padding: 100px 40px;
-    position: relative;
-    line-height: 0.9;
-    width: 100%;
+    @apply bg-secondary-200 py-24 px-10 relative leading-none;
+    width: 100vw;
 }
 
 .hero-banner-container .beats-solo {
@@ -229,16 +205,6 @@ a {
 .products-heading p {
     font-size: 16px;
     font-weight: 200;
-}
-
-.footer-banner-container {
-    @apply bg-secondary-200 text-white mt-10;
-    padding: 100px 40px;
-    border-radius: 15px;
-    position: relative;
-    height: 400px;
-    line-height: 1;
-    width: 100%;
 }
 
 .banner-desc {

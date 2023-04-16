@@ -17,7 +17,7 @@ const FooterBanner = ({
                         }
                       }) => {
   return (
-    <section className="footer-banner-container">
+    <section className="bg-secondary-200 text-white mt-10 rounded-3xl w-8/12 py-24 px-10 h-96 leading-none">
       <section className="banner-desc">
         <section className="left">
           <p>{discount}</p>
