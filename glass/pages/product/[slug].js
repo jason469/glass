@@ -52,10 +52,10 @@ const ProductDetails = ({product, products}) => {
             
             </section>
             
-            <section className="product-detail-desc">
-              <h1 className="font-bold">{name}</h1>
-              <section className="reviews">
-                <section className="flex">
+            <section className="flex flex-col gap-4">
+              <h1 className="font-bold text-4xl">{name}</h1>
+              <section className="text-navyBlue-300 mt-2.5 flex gap-1 align-middle">
+                <section className="flex items-center">
                   <AiFillStar/>
                   <AiFillStar/>
                   <AiFillStar/>
@@ -66,36 +66,35 @@ const ProductDetails = ({product, products}) => {
                   (20)
                 </p>
               </section>
-              <h4>Details: </h4>
-              <p>{details}</p>
-              <p className="price">${price}</p>
-              <section className="quantity">
-                <h3>Quantity: </h3>
-                <p className="quantity-desc | flex | justify-center items-center">
-                <span
-                  className="minus"
-                  onClick={decQty}
-                >
-                  <AiOutlineMinus/>
-                </span>
-                  <span
-                    className="num"
-                  >
-                  {qty}
-                </span>
-                  <span
-                    className="plus"
-                    onClick={incQty}
-                  >
-                  <AiOutlinePlus/>
-                </span>
+              <section>
+                <h4>Details: </h4>
+                <p>{details}</p>
+              </section>
+              <p className="text-navyBlue-300 bold text-2xl mt-3">${price}</p>
+              <section className="flex g-4 items-center | mt-2">
+                <h3 className="mr-2">Quantity:</h3>
+                <p className="flex | justify-center items-center gap-2 | text-lg | cursor-pointer">
+                  <i className="fa-solid fa-circle-minus" onClick={decQty}></i>
+                  <span className=""> {qty}</span>
+                  <i className="fa-solid fa-circle-plus" onClick={incQty}></i>
                 </p>
               </section>
-              <section className="buttons">
-                <button type="button" className="add-to-cart" onClick={() => addItem(product, qty)}
-                        disabled={productInCart}>{productInCart ? "In Cart" : "Add to Cart"}
+              <section className="flex gap-4">
+                <button
+                  type="button"
+                  className="add-to-cart | button | transition duration-500"
+                  onClick={() => addItem(product, qty)}
+                  disabled={productInCart}
+                >
+                  {productInCart ? "In Cart" : "Add to Cart"}
                 </button>
-                <button type="button" className="buy-now" onClick={() => handleBuyNow(product, qty)}>Buy now</button>
+                <button
+                  type="button"
+                  className="buy-now | button | transition duration-500"
+                  onClick={() => handleBuyNow(product, qty)}
+                >
+                  Buy now
+                </button>
               </section>
             </section>
           </section>

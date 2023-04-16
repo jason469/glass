@@ -8,22 +8,25 @@ const Navbar = (props) => {
   const {showCart, setShowCart, totalQuantities} = useStateContext()
   
   return (
-    <section className="navbar-container">
-      <section className="logo">
-        <Link href="/" style={{fontFamily: ""}}>Glass</Link>
+    <section className="navbar-container | bg-primary-200">
+      <section className="font-logo | text-white text-4xl italic font-bold tracking-widest">
+        <Link href="/" className="font-logo">Glass</Link>
       </section>
       
-      <section className="flex gap-4">
-        <p className="">
+      <section className="flex gap-4 | uppercase | text-white tracking-wider">
           <a href="https://glass.sanity.studio/desk" target="_blank">Sanity</a>
-        </p>
-        
+      </section>
+      
+      <section className="flex gap-4 | text-white">
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
-          <AiOutlineShopping/>
-          <span className="cart-item-qty">{totalQuantities}</span>
+          <AiOutlineShopping className="text-white"/>
+          <span className="cart-item-qty | bg-white | text-primary-200">{totalQuantities}</span>
         </button>
       </section>
-      {showCart && <Cart/>}
+      
+      {
+        showCart && <Cart/>
+      }
     </section>
   )
 };

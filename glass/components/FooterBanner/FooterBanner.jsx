@@ -39,7 +39,7 @@ const FooterBanner = ({
           <h3>{midText}</h3>
           <p>{desc}</p>
           <Link href={`/product/${product}`}>
-            <button type="button">
+            <button type="button" className="button">
               {buttonText}
             </button>
           </Link>

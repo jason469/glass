@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import {Navbar} from "../../components";
 import {Footer} from "../../components";
+import HeaderBanner from "../../components/HeaderBanner/HeaderBanner";
 const Layout = ({children}) => {
   return (
     <section className="layout">
@@ -11,6 +12,7 @@ const Layout = ({children}) => {
       </Head>
       
       <header>
+        <HeaderBanner/>
         <Navbar />
       </header>
       

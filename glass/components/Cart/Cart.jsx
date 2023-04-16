@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import Link from 'next/link';
-import {AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping} from 'react-icons/ai';
+import {AiOutlineMinus, AiOutlinePlus, AiOutlineShopping} from 'react-icons/ai';
 import {TiDeleteOutline} from 'react-icons/ti';
 import toast from 'react-hot-toast';
 
@@ -39,9 +39,9 @@ const Cart = () => {
           type="button"
           className="cart-heading"
           onClick={() => setShowCart(false)}>
-          <AiOutlineLeft/>
+          <i className="fa-solid fa-caret-left"></i>
           <span className="heading">Your Cart</span>
-          <span className="cart-num-items">({totalQuantities} items)</span>
+          <span className="ml-2 text-navyBlue-200">({totalQuantities} items)</span>
         </button>
         
         {cartItems.length < 1 && (
@@ -52,7 +52,7 @@ const Cart = () => {
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
-                className="btn"
+                className="button"
               >
                 Continue Shopping
               </button>
@@ -99,7 +99,7 @@ const Cart = () => {
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick={handleCheckout}>
+              <button type="button" className="button" onClick={handleCheckout}>
                 Pay with Stripe
               </button>
             </div>
