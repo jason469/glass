@@ -13,6 +13,7 @@ Stripe is currently using **test data mode** and so no transactions will actuall
 - **_Sanity_** is used as a CMS to allow users to easily add new items to the website and change the banner
 - **_Stripe_** is used to handle payments  
 - **_TailwindCSS_** is used to help with building the CSS  
+**_Vercel_** is used to deploy the website to the internet 
 
 ### Moving forward with Glass
 Glass is currently in version 1.0 for the production state.<br>
